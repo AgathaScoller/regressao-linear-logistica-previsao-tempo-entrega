@@ -1,0 +1,223 @@
+# Respostas Teóricas – Regressão Linear com Base de Logística
+
+## Parte A – Exploração
+
+**Exercício 7**  
+A variável alvo é `tempo_entrega_min`.
+
+**Exercício 8**  
+As variáveis mais relevantes para prever o tempo de entrega são:
+- distancia_km
+- peso_kg
+- qtd_itens
+- trafego
+- clima
+- tipo_entrega
+- regiao  
+
+**Exercício 9**  
+Variáveis categóricas:
+- trafego
+- clima
+- tipo_entrega
+- regiao  
+
+**Exercício 10**  
+Não podemos usar variáveis categóricas diretamente porque o modelo de regressão linear trabalha apenas com valores numéricos. Categorias precisam ser transformadas em números.
+
+---
+
+## Parte B – Estatística
+
+**Exercício 16**  
+Se média e mediana forem diferentes, pode haver assimetria ou outliers nos dados.
+
+**Exercício 17**  
+Se o desvio padrão for alto, isso indica grande variação nos tempos de entrega.
+
+**Exercício 18**  
+Sim, valores muito altos ou muito baixos em relação ao restante podem ser considerados outliers.
+
+---
+
+## Parte C – Visualização
+
+**Exercício 29**  
+A variável mais relacionada ao tempo de entrega tende a ser `distancia_km`.
+
+**Exercício 30**  
+Sim, geralmente há uma relação aproximadamente linear entre distância e tempo.
+
+---
+
+## Parte D – Correlação
+
+**Exercício 34**  
+A variável com maior correlação positiva costuma ser `distancia_km`.
+
+**Exercício 35**  
+Variáveis como `valor_pedido` geralmente têm menor correlação.
+
+**Exercício 36**  
+Não. Correlação não implica causalidade, pois duas variáveis podem estar relacionadas sem uma causar a outra.
+
+**Exercício 37**  
+Não. Mesmo com baixa correlação isolada, a variável pode ser útil em conjunto com outras.
+
+**Exercício 38**  
+Sim, pois maior distância normalmente aumenta o tempo de entrega.
+
+**Exercício 39**  
+Pode ser relevante, pois pedidos mais pesados podem demandar mais tempo.
+
+**Exercício 40**  
+Para um modelo simples: `distancia_km`.
+
+---
+
+## Parte E – Regressão Simples
+
+**Exercício 46**  
+O coeficiente angular indica quanto o tempo de entrega aumenta a cada 1 km adicional.
+
+**Exercício 50**  
+- MAE: erro médio em minutos  
+- RMSE: penaliza erros maiores  
+- R²: indica o quanto o modelo explica os dados  
+
+---
+
+## Parte F – Visualização da Reta
+
+**Exercício 53**  
+O modelo representa a tendência geral, mas não captura toda a variação.
+
+**Exercício 54**  
+Sim, existem pontos distantes da reta.
+
+**Exercício 55**  
+Podem representar situações como trânsito intenso, clima ruim ou falhas operacionais.
+
+---
+
+## Parte G – Previsões
+
+**Exercício 59**  
+As previsões fazem sentido, mas são simplificadas.
+
+**Exercício 60**  
+O modelo ignora:
+- tráfego
+- clima
+- tipo de entrega
+- peso e quantidade de itens  
+
+---
+
+## Parte H – Variáveis Categóricas
+
+**Exercício 63**  
+Transforma variáveis categóricas em colunas numéricas (0 e 1).
+
+**Exercício 64**  
+Evita multicolinearidade (redundância entre variáveis).
+
+**Exercício 65**  
+Exemplos de novas colunas:
+- trafego_medio
+- trafego_alto
+- clima_chuva
+- clima_forte_chuva
+- tipo_entrega_expressa  
+
+---
+
+## Parte I – Regressão Múltipla
+
+**Exercício 73**  
+O modelo múltiplo é melhor que o simples.
+
+**Exercício 74**  
+Sim, pois utiliza mais variáveis e explica melhor o tempo.
+
+**Exercício 75**  
+Variáveis mais importantes:
+- distancia_km
+- trafego
+- clima  
+
+---
+
+## Parte J – Coeficientes
+
+**Exercício 78**  
+Coeficientes positivos aumentam o tempo previsto.
+
+**Exercício 79**  
+Coeficientes negativos reduzem o tempo previsto.
+
+**Exercício 80**  
+Cada km adicional aumenta o tempo de entrega.
+
+**Exercício 81**  
+Entrega expressa reduz o tempo.
+
+**Exercício 82**  
+Tráfego alto aumenta o tempo.
+
+**Exercício 83**  
+Chuva forte aumenta o tempo.
+
+**Exercício 84**  
+Sim, os sinais fazem sentido com a realidade.
+
+**Exercício 85**  
+Pode indicar erro nos dados ou problemas no modelo.
+
+---
+
+## Parte K – Treino e Teste
+
+**Exercício 93**  
+Se o desempenho for parecido entre treino e teste, o modelo generaliza bem.
+
+**Exercício 94**  
+Overfitting ocorre quando o modelo vai muito bem no treino e mal no teste.
+
+**Exercício 95**  
+Antes de produção:
+- validar dados
+- monitorar desempenho
+- atualizar o modelo  
+
+---
+
+## Parte L – Conclusão
+
+**Exercício 99**  
+Erros altos podem ocorrer por:
+- trânsito inesperado
+- clima extremo
+- erros operacionais  
+
+**Exercício 100**
+
+1. O modelo é útil?  
+Sim.
+
+2. Qual o erro médio?  
+Representado pelo MAE (em minutos).
+
+3. Variáveis mais importantes:  
+- distancia_km  
+- trafego  
+- clima  
+- tipo_entrega  
+
+4. Deve ser usado sozinho?  
+Não.
+
+5. Melhorias:  
+- dados em tempo real  
+- mais variáveis  
+- modelos mais avançados  
